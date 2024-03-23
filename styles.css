@@ -1,7 +1,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: white;
-    padding: 80px;
+    padding:0px;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -66,6 +66,8 @@ body {
     position: relative;
   }
   
+
+
   @media screen and (max-width: 768px) {
     .frozen-column,
     .comparison-table th,
@@ -91,7 +93,7 @@ body {
       padding: 95px;
     }
     .comparison-table {
-      min-width: 600px; /* Adjusted minimum width for smaller screens */
+      min-width: 300px; /* Adjusted minimum width for smaller screens */
     }
   
     .frozen-column {
@@ -100,13 +102,7 @@ body {
       left: 0;
       width: 100px;
     }
+
   
   }
   
-  
-  @media  screen and (max-width: 410px) {
-    .frozen-column {
-      position: relative;
-    }
-    
-  }
