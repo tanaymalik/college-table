@@ -1,0 +1,112 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    padding: 80px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 80px;
+  }
+  
+  .table-wrapper {
+    overflow-x: auto;
+    max-width: 100%;
+  }
+  
+  .table-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    margin: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px #00203FFF;
+    font-weight: 800;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 18px;
+  }
+  
+  .comparison-table th {
+    background-color: #00203FFF;
+    color:aquamarine;
+  }
+  
+  .comparison-table tbody tr:hover .frozen-column {
+    background-color: #00203FFF; /* Light blue background on hover */
+    color: aquamarine;
+    font-weight: 800;
+  }
+  
+  .frozen-column {
+    width: 200px;
+    height: 100px;
+    position: sticky;
+    left: 0;
+    border: 1px black;
+    background-color: #f2f2f2;
+    z-index: 2;
+  }
+  
+  .comparison-table td:not(.frozen-column) {
+    position: relative;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .frozen-column,
+    .comparison-table th,
+    .comparison-table td {
+      padding: 12px;
+      font-size: 16px;
+    }
+  
+    .frozen-column {
+      width: 120px;
+    
+    }
+  
+    .comparison-table {
+      width: 600px;
+      margin: auto;
+      padding: 10px; /* Add padding for more space */
+    }
+  }
+  
+  @media screen and (max-width: 540px) {
+    table {
+      padding: 95px;
+    }
+    .comparison-table {
+      min-width: 600px; /* Adjusted minimum width for smaller screens */
+    }
+  
+    .frozen-column {
+      padding-right: 10px;
+      font-size: 4px;
+      left: 0;
+      width: 100px;
+    }
+  
+  }
+  
+  
+  @media  screen and (max-width: 410px) {
+    .frozen-column {
+      position: relative;
+    }
+    
+  }
