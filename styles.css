@@ -3,20 +3,19 @@ body {
     background-color: white;
     padding:0px;
     margin: 0;
-    display: flex;
-    justify-content: center;
+ 
     align-items: center;
     min-height: 100vh;
     font-size: 80px;
   }
   
   .table-wrapper {
-    overflow-x: auto;
+    overflow-x: scroll;
     max-width: 100%;
   }
   
   .table-scroll {
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: hidden;
   }
   
@@ -27,7 +26,7 @@ body {
     table-layout: fixed;
     margin: auto;
     border-radius: 8px;
-    overflow: hidden;
+
     background-color: rgb(255, 255, 255);
     box-shadow: 0 2px 4px #00203FFF;
     font-weight: 800;
@@ -52,10 +51,12 @@ body {
     font-weight: 800;
   }
   
-  .frozen-column {
+   .frozen-column {
     width: 200px;
     height: 100px;
+    position: -webkit-sticky;
     position: sticky;
+    top: 0; /* Add top: 0; to stick at the top of the viewport */
     left: 0;
     border: 1px black;
     background-color: #f2f2f2;
@@ -97,9 +98,10 @@ body {
     }
   
     .frozen-column {
+      
       padding-right: 10px;
       font-size: 4px;
-      left: 0;
+      
       width: 100px;
     }
 
